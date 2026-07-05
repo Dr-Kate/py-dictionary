@@ -41,7 +41,7 @@ class Dictionary:
             if self.keys[index] == key:
                 return self.values[index]
             if self.keys[index] is None:
-                raise KeyError("Key {key!r} not found")
+                raise KeyError(f"Key {key!r} not found")
             index = (index + 1) % self.capacity
 
     def __len__(self) -> int:
